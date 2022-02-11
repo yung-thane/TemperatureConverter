@@ -28,10 +28,24 @@ public class TemperatureConverter {
     public getTemp(double ){
         Scanner givenTemp = new Scanner(System.in);
         Scanner givenScale = new Scanner(System.in);
+        Scanner desiredScale = new Scanner(System.in);
+
+
         System.out.println("What temperature scale are you converting from?\nF for Fahrenheit, C for Celsius, K for Kelvin.");
         char tempScale = givenScale.nextLine();
+        double newTemp;
 
         if (tempScale == 'f'){
+            System.out.println("What is the temperature you wish to convert?");
+            double oldTemp = givenTemp.nextLine();
+
+            System.out.println("What is the desired temperature scale you want to convert to?\nC for Celsius, K for Kelvin.");
+            char newScale = desiredScale.nextLine();
+
+            if (newScale = 'c'){
+                fahToCel(oldTemp) = newTemp;
+                System.out.println("%.2f Fahrenheit is approximately %.2f Celsius.", oldTemp, newTemp);
+            }
 
         }
         else if (tempScale == 'c'){
