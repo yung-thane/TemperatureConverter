@@ -25,7 +25,7 @@ public class TemperatureConverter {
         return celsiusTemp;
 
     }
-    public getTemp(double oldTemp){
+    public getTemp(){
         Scanner givenTemp = new Scanner(System.in);
         Scanner givenScale = new Scanner(System.in);
         Scanner desiredScale = new Scanner(System.in);
@@ -33,6 +33,7 @@ public class TemperatureConverter {
 
         System.out.println("What temperature scale are you converting from?\nF for Fahrenheit, C for Celsius, K for Kelvin.");
         char tempScale = givenScale.nextLine();
+        double oldTemp;
         double newTemp;
         char newScale;
 
